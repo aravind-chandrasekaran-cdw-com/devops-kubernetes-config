@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: teach-react-app
-          image: aravindnys/teach-react-app:f57ed104
+          image: aravindnys/teach-react-app:e8b7b111
           ports:
             - containerPort: 80
           resources:
