@@ -1,30 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: teach-react-app
+  name: express-order-service
   labels:
-    app: teach-react-app
+    app: express-order-service
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: teach-react-app
+      app: express-order-service
   template:
     metadata:
       labels:
-        app: teach-react-app
+        app: express-order-service
     spec:
       containers:
-        - name: teach-react-app
-          image: aravindnys/teach-react-app:e7f7872c
-          ports:
-            - containerPort: 80
-          resources:
+      - name: express-order-service
+        image: sharvesh10/express-order-service:5f8cdb7c
+        ports:
+          - containerPort: 3000
+        resources:
             requests:
               cpu: "100m"
               memory: "128Mi"
             limits:
               cpu: "250m"
               memory: "256Mi"
-
- 
